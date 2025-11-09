@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorkStack - Connect Talent with Opportunity</title>
+    <title>WorkStack - Software Consultancy & Solutions</title>
 
     <style>
         @font-face {
@@ -27,30 +27,28 @@
             font-style: normal;
         }
         
-        .stats,
-        .testimonials{
-            display: none;
-        }
         :root {
-            --primary-color: #2e2836;
-            --primary-gradient: linear-gradient(135deg, #2e2836 0%, #3a3444 100%);
-            --secondary-gradient: linear-gradient(135deg, #2e2836 0%, #3f3848 100%);
-            --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-            --dark-gradient: linear-gradient(135deg, #1e1b24 0%, #2e2836 100%);
-            --glass-bg: rgba(255, 255, 255, 0.08);
-            --glass-bg-hover: rgba(255, 255, 255, 0.12);
-            --glass-border: rgba(255, 255, 255, 0.15);
-            --glass-shadow: 0 8px 32px 0 rgba(46, 40, 54, 0.4);
-            --liquid-glass-bg: rgba(255, 255, 255, 0.06);
-            --liquid-glass-border: rgba(255, 255, 255, 0.12);
+            --primary-color: #0a0e27;
+            --primary-gradient: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            --secondary-gradient: linear-gradient(135deg, #0f1429 0%, #1e2442 100%);
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+            --accent-blue: #3b82f6;
+            --accent-blue-dark: #2563eb;
+            --dark-gradient: linear-gradient(135deg, #050810 0%, #0a0e27 100%);
+            --glass-bg: rgba(59, 130, 246, 0.1);
+            --glass-bg-hover: rgba(59, 130, 246, 0.15);
+            --glass-border: rgba(59, 130, 246, 0.2);
+            --glass-shadow: 0 8px 32px 0 rgba(37, 99, 235, 0.3);
+            --liquid-glass-bg: rgba(59, 130, 246, 0.08);
+            --liquid-glass-border: rgba(59, 130, 246, 0.15);
             --text-primary: #ffffff;
-            --text-secondary: #a1a1aa;
+            --text-secondary: #94a3b8;
             --text-light: rgba(255, 255, 255, 0.9);
-            --shadow-sm: 0 4px 6px -1px rgba(46, 40, 54, 0.3);
-            --shadow-md: 0 10px 15px -3px rgba(46, 40, 54, 0.4);
-            --shadow-lg: 0 20px 25px -5px rgba(46, 40, 54, 0.5);
-            --shadow-xl: 0 25px 50px -12px rgba(46, 40, 54, 0.6);
-            --shadow-glass: 0 8px 32px 0 rgba(46, 40, 54, 0.4);
+            --shadow-sm: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+            --shadow-md: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+            --shadow-lg: 0 20px 25px -5px rgba(37, 99, 235, 0.4);
+            --shadow-xl: 0 25px 50px -12px rgba(37, 99, 235, 0.5);
+            --shadow-glass: 0 8px 32px 0 rgba(37, 99, 235, 0.4);
         }
 
         * {
@@ -91,9 +89,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.25) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(59, 130, 246, 0.18) 0%, transparent 50%),
+                        radial-gradient(circle at 60% 40%, rgba(29, 78, 216, 0.15) 0%, transparent 50%);
             animation: liquidMove 15s ease-in-out infinite;
         }
 
@@ -369,7 +368,7 @@
         .mobile-menu-toggle:hover {
             background: var(--glass-bg-hover);
             transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
         .mobile-menu-toggle:focus {
@@ -439,10 +438,10 @@
 
         @keyframes pulseGlow {
             0%, 100% { 
-                filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));
+                filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
             }
             50% { 
-                filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.8));
+                filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.8));
             }
         }
 
@@ -679,7 +678,7 @@
 
         .feature-card:hover .feature-icon {
             transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.5);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
         }
 
         .feature-card h3 {
@@ -709,7 +708,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
         }
 
         .team h2 {
@@ -831,7 +830,7 @@
         .team-card:hover .placeholder-image {
             transform: scale(1.1);
             border-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
         }
 
         .team-info h3 {
@@ -1021,7 +1020,7 @@
 
         .testimonial-card:hover .author-avatar {
             transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
         }
 
         .author-info h4 {
@@ -1116,8 +1115,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
             z-index: -1;
         }
 
@@ -1226,7 +1225,7 @@
         .mobile-menu-links a:hover {
             background: var(--glass-bg-hover);
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
             border-color: rgba(255, 255, 255, 0.3);
         }
 
@@ -1242,12 +1241,12 @@
             padding: 1rem 2.5rem;
             width: 100%;
             display: block;
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
         }
 
         .mobile-cta .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(99, 102, 241, 0.5);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.5);
         }
 
         /* Responsive Design */
@@ -1435,10 +1434,10 @@
 
         @keyframes liquidGlow {
             0%, 100% {
-                box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
             }
             50% {
-                box-shadow: 0 0 40px rgba(139, 92, 246, 0.7);
+                box-shadow: 0 0 40px rgba(37, 99, 235, 0.7);
             }
         }
 
@@ -1497,13 +1496,13 @@
             <div class="nav-container">
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#jobs">Find Jobs</a></li>
-                    <li><a href="#employers">For Employers</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <a href="#" class="cta-button">Get Started</a>
+                <a href="#contact" class="cta-button">Get Free Consultation</a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                 <div class="hamburger">
@@ -1521,14 +1520,14 @@
            
             <ul class="mobile-menu-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#jobs">Find Jobs</a></li>
-                <li><a href="#employers">For Employers</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#solutions">Solutions</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-cta">
-                <a href="#" class="cta-button">Get Started</a>
+                <a href="#contact" class="cta-button">Get Free Consultation</a>
             </div>
         </div>
     </div>
@@ -1536,51 +1535,50 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content animate-fade-in">
-               
-                <h1>Connect Talent with Opportunity</h1>
-                <p>WorkStack bridges the gap between job seekers and employers with AI-powered matching, making hiring and job searching simple, efficient, and effective.</p>
+                <h1>Empowering Businesses with Cutting-Edge Software Solutions</h1>
+                <p>Transform your digital infrastructure with our expert software consultancy services. We deliver scalable, secure, and innovative solutions that drive growth and efficiency.</p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn-primary">Find Your Dream Job</a>
-                    <a href="#" class="btn-secondary">Hire Top Talent</a>
+                    <a href="#contact" class="btn-primary">Get Free Consultation</a>
+                    <a href="#services" class="btn-secondary">View Our Services</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="features">
+    <section id="services" class="features">
         <div class="container">
-            <h2 class="scroll-reveal">Why Choose WorkStack?</h2>
-            <p class="features-subtitle scroll-reveal">Experience the future of recruitment with cutting-edge technology and human-centered design</p>
+            <h2 class="scroll-reveal">Our Services</h2>
+            <p class="features-subtitle scroll-reveal">Comprehensive software solutions tailored to your business needs</p>
             <div class="features-grid">
                 <div class="feature-card scroll-reveal liquid-morph">
-                    <div class="feature-icon liquid-glow">🎯</div>
-                    <h3>AI-Powered Matching</h3>
-                    <p>Our advanced machine learning algorithm analyzes skills, experience, company culture, and career goals to create perfect matches between candidates and opportunities.</p>
+                    <div class="feature-icon liquid-glow">💻</div>
+                    <h3>Custom Software Development</h3>
+                    <p>Build scalable, high-performance applications tailored to your unique business requirements. From web apps to mobile solutions, we deliver excellence.</p>
                 </div>
                 <div class="feature-card scroll-reveal liquid-morph">
-                    <div class="feature-icon liquid-glow">⚡</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Streamlined application process with one-click applications for job seekers and instant candidate screening for employers. Get results in minutes, not days.</p>
+                    <div class="feature-icon liquid-glow">🔧</div>
+                    <h3>IT Consulting</h3>
+                    <p>Strategic technology guidance to optimize your infrastructure, reduce costs, and accelerate digital transformation initiatives.</p>
                 </div>
                 <div class="feature-card scroll-reveal liquid-morph">
-                    <div class="feature-icon liquid-glow">🌟</div>
-                    <h3>Premium Quality</h3>
-                    <p>Every job posting and candidate profile is verified by our quality assurance team to ensure authentic connections and eliminate spam or irrelevant matches.</p>
+                    <div class="feature-icon liquid-glow">☁️</div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Migrate to the cloud with confidence. We design and implement secure, scalable cloud architectures that grow with your business.</p>
                 </div>
                 <div class="feature-card scroll-reveal liquid-morph">
-                    <div class="feature-icon liquid-glow">📊</div>
-                    <h3>Advanced Analytics</h3>
-                    <p>Comprehensive insights and real-time analytics help you optimize your job search strategy or recruitment campaigns for maximum success.</p>
+                    <div class="feature-icon liquid-glow">🔗</div>
+                    <h3>System Integration</h3>
+                    <p>Seamlessly connect your existing systems and third-party services. Streamline workflows and improve operational efficiency.</p>
                 </div>
                 <div class="feature-card scroll-reveal liquid-morph">
-                    <div class="feature-icon liquid-glow">🔒</div>
-                    <h3>Enterprise Security</h3>
-                    <p>Bank-level security with end-to-end encryption protects your sensitive data. Full control over privacy settings and profile visibility.</p>
+                    <div class="feature-icon liquid-glow">🛡️</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Protect your digital assets with enterprise-grade security solutions. Comprehensive audits, threat detection, and compliance management.</p>
                 </div>
                 <div class="feature-card scroll-reveal liquid-morph">
-                    <div class="feature-icon liquid-glow">💬</div>
-                    <h3>24/7 Expert Support</h3>
-                    <p>Our dedicated team of career advisors and technical support specialists are available around the clock to guide your journey.</p>
+                    <div class="feature-icon liquid-glow">📱</div>
+                    <h3>Mobile App Development</h3>
+                    <p>Native and cross-platform mobile applications that deliver exceptional user experiences on iOS and Android devices.</p>
                 </div>
             </div>
         </div>
@@ -1588,23 +1586,23 @@
 
     <section class="team">
         <div class="container">
-            <h2 class="scroll-reveal">Meet Our Team</h2>
-            <p class="team-subtitle scroll-reveal">The visionaries behind WorkStack's revolutionary platform</p>
+            <h2 class="scroll-reveal">Meet Our Expert Team</h2>
+            <p class="team-subtitle scroll-reveal">Experienced professionals dedicated to delivering exceptional software solutions</p>
             <div class="team-grid">
                 <div class="team-card scroll-reveal liquid-morph">
                     <div class="team-image">
                         <div class="placeholder-image">
                             <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="120" height="120" rx="60" fill="var(--liquid-glass-bg)"/>
-                                <circle cx="60" cy="45" r="20" fill="rgba(255,255,255,0.3)"/>
-                                <path d="M30 95 Q30 75 60 75 Q90 75 90 95" fill="rgba(255,255,255,0.3)"/>
+                                <circle cx="60" cy="45" r="20" fill="rgba(59, 130, 246, 0.4)"/>
+                                <path d="M30 95 Q30 75 60 75 Q90 75 90 95" fill="rgba(59, 130, 246, 0.4)"/>
                             </svg>
                         </div>
                     </div>
                     <div class="team-info">
                         <h3>Shubham Singh</h3>
-                        <p class="team-role">Founder</p>
-                        <p class="team-description">Visionary leader with a passion for connecting talent with opportunity. Drives the strategic vision and innovation at WorkStack.</p>
+                        <p class="team-role">Founder & CEO</p>
+                        <p class="team-description">Strategic leader with 10+ years in software architecture and enterprise solutions. Drives innovation and client success at WorkStack.</p>
                     </div>
                 </div>
                 <div class="team-card scroll-reveal liquid-morph">
@@ -1612,15 +1610,15 @@
                         <div class="placeholder-image">
                             <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="120" height="120" rx="60" fill="var(--liquid-glass-bg)"/>
-                                <circle cx="60" cy="45" r="20" fill="rgba(255,255,255,0.3)"/>
-                                <path d="M30 95 Q30 75 60 75 Q90 75 90 95" fill="rgba(255,255,255,0.3)"/>
+                                <circle cx="60" cy="45" r="20" fill="rgba(59, 130, 246, 0.4)"/>
+                                <path d="M30 95 Q30 75 60 75 Q90 75 90 95" fill="rgba(59, 130, 246, 0.4)"/>
                             </svg>
                         </div>
                     </div>
                     <div class="team-info">
                         <h3>Aryan Singh</h3>
-                        <p class="team-role">Co-founder</p>
-                        <p class="team-description">Technology enthusiast and strategic thinker. Leads product development and ensures exceptional user experiences across the platform.</p>
+                        <p class="team-role">Co-founder & CTO</p>
+                        <p class="team-description">Full-stack architect specializing in cloud-native applications and modern tech stacks. Ensures technical excellence across all projects.</p>
                     </div>
                 </div>
             </div>
@@ -1632,20 +1630,20 @@
             <div class="stats-content">
                 <div class="stats-grid">
                     <div class="stat-item scroll-reveal">
-                        <h3>50K+</h3>
-                        <p>Active Job Seekers</p>
+                        <h3>200+</h3>
+                        <p>Projects Delivered</p>
                     </div>
                     <div class="stat-item scroll-reveal">
-                        <h3>5K+</h3>
-                        <p>Trusted Employers</p>
+                        <h3>150+</h3>
+                        <p>Happy Clients</p>
                     </div>
                     <div class="stat-item scroll-reveal">
-                        <h3>95%</h3>
-                        <p>Match Success Rate</p>
+                        <h3>98%</h3>
+                        <p>Client Satisfaction</p>
                     </div>
                     <div class="stat-item scroll-reveal">
-                        <h3>10K+</h3>
-                        <p>Jobs Filled</p>
+                        <h3>10+</h3>
+                        <p>Years of Experience</p>
                     </div>
                 </div>
             </div>
@@ -1654,35 +1652,35 @@
 
     <section class="testimonials">
         <div class="container">
-            <h2 class="scroll-reveal">What Our Users Say</h2>
+            <h2 class="scroll-reveal">What Our Clients Say</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card scroll-reveal liquid-morph">
-                    <p class="testimonial-text">"WorkStack completely transformed my job search. The AI matching was spot-on and I found my dream job in just 2 weeks!"</p>
+                    <p class="testimonial-text">"WorkStack transformed our entire digital infrastructure. Their cloud migration strategy saved us 40% on infrastructure costs while improving performance."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar liquid-pulse">S</div>
                         <div class="author-info">
                             <h4>Sarah Johnson</h4>
-                            <p>Software Engineer at TechCorp</p>
+                            <p>CTO at TechCorp</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card scroll-reveal liquid-morph">
-                    <p class="testimonial-text">"As a hiring manager, WorkStack saved me countless hours. The quality of candidates is exceptional and the process is seamless."</p>
+                    <p class="testimonial-text">"The custom software solution delivered by WorkStack exceeded our expectations. Their team's expertise and attention to detail is unmatched."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar liquid-pulse">M</div>
                         <div class="author-info">
                             <h4>Mike Chen</h4>
-                            <p>HR Director at StartupXYZ</p>
+                            <p>Founder at StartupXYZ</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card scroll-reveal liquid-morph">
-                    <p class="testimonial-text">"The analytics dashboard helped me understand exactly what employers were looking for. I improved my profile and got 3 job offers!"</p>
+                    <p class="testimonial-text">"Outstanding cybersecurity implementation. WorkStack helped us achieve compliance and significantly strengthened our security posture."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar liquid-pulse">A</div>
                         <div class="author-info">
                             <h4>Alex Rodriguez</h4>
-                            <p>Marketing Manager at AdAgency</p>
+                            <p>IT Director at EnterpriseCo</p>
                         </div>
                     </div>
                 </div>
@@ -1695,41 +1693,41 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>WorkStack</h3>
-                    <p>Connecting talent with opportunity through innovative technology and human-centered design. Building the future of work, one match at a time.</p>
+                    <p>Empowering businesses with cutting-edge software solutions. We deliver scalable, secure, and innovative technology that drives growth and efficiency.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>For Job Seekers</h3>
+                    <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Browse Jobs</a></li>
-                        <li><a href="#">Create Profile</a></li>
-                        <li><a href="#">Career Resources</a></li>
-                        <li><a href="#">Interview Prep</a></li>
-                        <li><a href="#">Salary Insights</a></li>
+                        <li><a href="#services">Custom Development</a></li>
+                        <li><a href="#services">IT Consulting</a></li>
+                        <li><a href="#services">Cloud Solutions</a></li>
+                        <li><a href="#services">System Integration</a></li>
+                        <li><a href="#services">Cybersecurity</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>For Employers</h3>
+                    <h3>Solutions</h3>
                     <ul>
-                        <li><a href="#">Post Jobs</a></li>
-                        <li><a href="#">Find Candidates</a></li>
-                        <li><a href="#">Pricing Plans</a></li>
-                        <li><a href="#">Hiring Solutions</a></li>
-                        <li><a href="#">Enterprise</a></li>
+                        <li><a href="#solutions">Enterprise Software</a></li>
+                        <li><a href="#solutions">Mobile Applications</a></li>
+                        <li><a href="#solutions">API Development</a></li>
+                        <li><a href="#solutions">DevOps & CI/CD</a></li>
+                        <li><a href="#solutions">Digital Transformation</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Company</h3>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Careers</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 WorkStack. All rights reserved. Made with ❤️ for the future of work.</p>
+                <p>&copy; 2025 WorkStack. All rights reserved. Built with precision and passion.</p>
             </div>
         </div>
     </footer>
@@ -1914,7 +1912,7 @@
             ripple.style.width = '20px';
             ripple.style.height = '20px';
             ripple.style.borderRadius = '50%';
-            ripple.style.background = 'rgba(99, 102, 241, 0.6)';
+            ripple.style.background = 'rgba(59, 130, 246, 0.6)';
             ripple.style.left = e.clientX - 10 + 'px';
             ripple.style.top = e.clientY - 10 + 'px';
             ripple.style.pointerEvents = 'none';
