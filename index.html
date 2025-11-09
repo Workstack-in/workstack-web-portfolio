@@ -1034,6 +1034,247 @@
             font-size: 0.9rem;
         }
 
+        /* Contact Section */
+        .contact {
+            padding: 120px 0;
+            background: var(--secondary-gradient);
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 800;
+        }
+
+        .contact-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-info-card {
+            background: var(--liquid-glass-bg);
+            backdrop-filter: blur(25px);
+            padding: 2rem;
+            border-radius: 25px;
+            border: 1px solid var(--liquid-glass-border);
+            box-shadow: var(--shadow-glass);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-info-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            background: var(--glass-bg-hover);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .contact-info-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            position: relative;
+        }
+
+        .contact-info-card.email h3::before {
+            content: '✉️';
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .contact-info-card.phone h3::before {
+            content: '📞';
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .contact-info-card.address h3::before {
+            content: '📍';
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .contact-info-card p,
+        .contact-info-card a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1rem;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info-card a:hover {
+            color: var(--accent-blue);
+            transform: translateX(5px);
+        }
+
+        .contact-form {
+            background: var(--liquid-glass-bg);
+            backdrop-filter: blur(25px);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 1px solid var(--liquid-glass-border);
+            box-shadow: var(--shadow-glass);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: translateX(-100%) skewX(-15deg);
+            transition: transform 0.6s ease;
+        }
+
+        .contact-form:hover::before {
+            transform: translateX(100%) skewX(-15deg);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 15px;
+            border: 1px solid var(--liquid-glass-border);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .submit-button {
+            background: var(--accent-gradient);
+            color: white;
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .submit-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .submit-button:hover::before {
+            left: 100%;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+            filter: brightness(1.1);
+        }
+
+        .submit-button:active {
+            transform: translateY(-2px) scale(0.98);
+        }
+
         /* Footer */
         footer {
             background: var(--dark-gradient);
@@ -1367,6 +1608,19 @@
             .stat-item h3 {
                 font-size: 2.5rem;
             }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact h2 {
+                font-size: 2rem;
+            }
+
+            .contact-form {
+                padding: 2rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1380,8 +1634,17 @@
 
             .features h2,
             .team h2,
-            .testimonials h2 {
+            .testimonials h2,
+            .contact h2 {
                 font-size: 1.8rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .contact-info-card {
+                padding: 1.5rem;
             }
 
             .stats-grid {
@@ -1630,19 +1893,19 @@
             <div class="stats-content">
                 <div class="stats-grid">
                     <div class="stat-item scroll-reveal">
-                        <h3>200+</h3>
+                        <h3>10+</h3>
                         <p>Projects Delivered</p>
                     </div>
                     <div class="stat-item scroll-reveal">
-                        <h3>150+</h3>
+                        <h3>5+</h3>
                         <p>Happy Clients</p>
                     </div>
                     <div class="stat-item scroll-reveal">
-                        <h3>98%</h3>
+                        <h3>100%</h3>
                         <p>Client Satisfaction</p>
                     </div>
                     <div class="stat-item scroll-reveal">
-                        <h3>10+</h3>
+                        <h3>8+</h3>
                         <p>Years of Experience</p>
                     </div>
                 </div>
@@ -1650,7 +1913,7 @@
         </div>
     </section>
 
-    <section class="testimonials">
+    <!-- <section class="testimonials">
         <div class="container">
             <h2 class="scroll-reveal">What Our Clients Say</h2>
             <div class="testimonials-grid">
@@ -1686,6 +1949,52 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="scroll-reveal">Get In Touch</h2>
+            <p class="contact-subtitle scroll-reveal">Have a project in mind? Let's discuss how we can help transform your business with cutting-edge software solutions.</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-info-card email scroll-reveal liquid-morph">
+                        <h3>Email Us</h3>
+                        <p>For support and inquiries, reach out to us at:</p>
+                        <a href="mailto:admin@workstack.in">admin@workstack.in</a>
+                    </div>
+                    <div class="contact-info-card phone scroll-reveal liquid-morph">
+                        <h3>Support</h3>
+                        <p>Need technical assistance? Our support team is here to help.</p>
+                        <a href="mailto:admin@workstack.in">admin@workstack.in</a>
+                    </div>
+                    <div class="contact-info-card address scroll-reveal liquid-morph">
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="contact-form scroll-reveal liquid-morph">
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="What is this regarding?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -1694,6 +2003,10 @@
                 <div class="footer-section">
                     <h3>WorkStack</h3>
                     <p>Empowering businesses with cutting-edge software solutions. We deliver scalable, secure, and innovative technology that drives growth and efficiency.</p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Support Email:</strong><br>
+                        <a href="mailto:admin@workstack.in" style="color: var(--accent-blue);">admin@workstack.in</a>
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h3>Services</h3>
@@ -1941,6 +2254,39 @@
             }
         `;
         document.head.appendChild(rippleStyle);
+
+        // Contact form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // Create mailto link with form data
+            const subject = encodeURIComponent(data.subject || 'Contact Form Submission');
+            const body = encodeURIComponent(
+                `Name: ${data.name}\n` +
+                `Email: ${data.email}\n\n` +
+                `Message:\n${data.message}`
+            );
+            const mailtoLink = `mailto:admin@workstack.in?subject=${subject}&body=${body}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            const submitButton = form.querySelector('.submit-button');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Message Sent!';
+            submitButton.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+            
+            // Reset form after a delay
+            setTimeout(() => {
+                form.reset();
+                submitButton.textContent = originalText;
+                submitButton.style.background = '';
+            }, 3000);
+        }
     </script>
 </body>
 </html>
