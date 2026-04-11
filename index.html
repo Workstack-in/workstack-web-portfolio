@@ -217,14 +217,12 @@
             justify-content: space-between;
             position: relative;
             width: 100%;
-           
             margin: 0 auto;
             padding: 0 24px;
         }
 
         .logo {
             font-size: 1.5rem;
-            /* font-weight: 800; */
             color: rgb(155, 150, 150);
             text-decoration: none;
             position: relative;
@@ -233,10 +231,7 @@
             padding: 0.2rem 1rem;
             border: 2px solid var(--liquid-glass-border);
             border-radius: 12px;
-            /* background: var(--liquid-glass-bg); */
-            /* backdrop-filter: blur(20px); */
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            /* box-shadow: var(--shadow-glass); */
         }
 
         .logo:hover {
@@ -422,27 +417,6 @@
             display: flex;
             align-items: center;
             position: relative;
-        }
-
-       
-
-        @keyframes heroFloat {
-            0%, 100% { 
-                transform: translateY(0px) rotate(0deg);
-            }
-            50% { 
-                transform: translateY(-20px) rotate(1deg);
-            }
-        }
-
-
-        @keyframes pulseGlow {
-            0%, 100% { 
-                filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
-            }
-            50% { 
-                filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.8));
-            }
         }
 
         .hero-content h1 {
@@ -694,169 +668,6 @@
             font-size: 1rem;
         }
 
-        /* Team Section */
-        .team {
-            padding: 120px 0;
-            background: var(--dark-gradient);
-            position: relative;
-        }
-
-        .team::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
-        }
-
-        .team h2 {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            font-weight: 800;
-        }
-
-        .team-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 4rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .team-card {
-            background: var(--liquid-glass-bg);
-            backdrop-filter: blur(25px);
-            border: 1px solid var(--liquid-glass-border);
-            border-radius: 25px;
-            padding: 3rem 2rem;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-glass);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .team-card::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--accent-gradient);
-            transform: scaleX(0);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .team-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transform: translateX(-100%) skewX(-15deg);
-            transition: transform 0.6s ease;
-        }
-
-        .team-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .team-card:hover::after {
-            transform: translateX(100%) skewX(-15deg);
-        }
-
-        .team-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-xl);
-            background: var(--glass-bg-hover);
-            border-color: rgba(255, 255, 255, 0.25);
-        }
-
-        .team-image {
-            margin-bottom: 2rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .placeholder-image {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto;
-            border-radius: 50%;
-            background: var(--liquid-glass-bg);
-            backdrop-filter: blur(20px);
-            border: 3px solid var(--liquid-glass-border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .placeholder-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transform: translateX(-100%) rotate(45deg);
-            transition: transform 0.6s ease;
-        }
-
-        .team-card:hover .placeholder-image::before {
-            transform: translateX(100%) rotate(45deg);
-        }
-
-        .team-card:hover .placeholder-image {
-            transform: scale(1.1);
-            border-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
-        }
-
-        .team-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-            font-weight: 700;
-        }
-
-        .team-role {
-            font-size: 1.1rem;
-            color: var(--accent-gradient);
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .team-description {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            font-size: 1rem;
-        }
-
         /* Stats Section */
         .stats {
             padding: 100px 0;
@@ -916,122 +727,6 @@
             font-size: 1.1rem;
             opacity: 0.9;
             font-weight: 500;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 120px 0;
-            background: var(--primary-gradient);
-        }
-
-        .testimonials h2 {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 4rem;
-            color: var(--text-primary);
-            font-weight: 800;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: var(--liquid-glass-bg);
-            backdrop-filter: blur(20px);
-            padding: 2rem;
-            border-radius: 25px;
-            position: relative;
-            border: 1px solid var(--liquid-glass-border);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-glass);
-            overflow: hidden;
-        }
-
-        .testimonial-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            transform: scale(0);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .testimonial-card:hover::before {
-            transform: scale(1);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-            background: var(--glass-bg-hover);
-            border-color: rgba(255, 255, 255, 0.25);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--accent-gradient);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-            font-size: 1.2rem;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .author-avatar::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transform: translateX(-100%) rotate(45deg);
-            transition: transform 0.6s ease;
-        }
-
-        .testimonial-card:hover .author-avatar::before {
-            transform: translateX(100%) rotate(45deg);
-        }
-
-        .testimonial-card:hover .author-avatar {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
-        }
-
-        .author-info h4 {
-            color: var(--text-primary);
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .author-info p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
         }
 
         /* Contact Section */
@@ -1384,10 +1079,7 @@
             padding: 0.2rem 1rem;
             border: 2px solid var(--liquid-glass-border);
             border-radius: 12px;
-           
-           
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-           
         }
 
         .mobile-menu-header .logo:hover {
@@ -1491,42 +1183,6 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            .nav-links {
-                gap: 1.5rem;
-            }
-
-            .nav-links a {
-                padding: 0.5rem 1rem;
-                font-size: 0.9rem;
-            }
-
-            .cta-button {
-                padding: 0.6rem 1.5rem;
-                font-size: 0.9rem;
-            }
-
-            .logo {
-                font-size: 1.8rem;
-            }
-        }
-
-        @media (max-width: 900px) {
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-links a {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.85rem;
-            }
-
-            .cta-button {
-                padding: 0.5rem 1.2rem;
-                font-size: 0.85rem;
-            }
-        }
-
         @media (max-width: 1200px) {
             .nav-container {
                 display: none;
@@ -1542,16 +1198,6 @@
 
             header {
                 padding: 0.8rem 0;
-            }
-        
-
-            .hero-illustration {
-                margin-bottom: 2rem;
-            }
-
-            .hero-illustration svg {
-                width: 300px;
-                height: 225px;
             }
 
             .hero-content h1 {
@@ -1581,23 +1227,6 @@
 
             .feature-card {
                 padding: 2rem;
-            }
-
-            .team-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .team h2 {
-                font-size: 2rem;
-            }
-
-            .team-card {
-                padding: 2rem 1.5rem;
-            }
-
-            .team-info h3 {
-                font-size: 1.5rem;
             }
 
             .stats-grid {
@@ -1633,8 +1262,6 @@
             }
 
             .features h2,
-            .team h2,
-            .testimonials h2,
             .contact h2 {
                 font-size: 1.8rem;
             }
@@ -1728,12 +1355,10 @@
             transform: translateY(0);
         }
 
-        /* Simple shine effect */
         .liquid-morph {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Prevent cut-off on hover */
         .feature-card,
         .testimonial-card {
             will-change: transform, background, border-color;
@@ -1761,7 +1386,6 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#solutions">Solutions</a></li>
-                    <li><a href="#team">Team</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -1780,12 +1404,10 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay">
         <div class="mobile-menu-content">
-           
             <ul class="mobile-menu-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#team">Team</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1847,47 +1469,6 @@
         </div>
     </section>
 
-    <!-- <section class="team">
-        <div class="container">
-            <h2 class="scroll-reveal">Meet Our Expert Team</h2>
-            <p class="team-subtitle scroll-reveal">Experienced professionals dedicated to delivering exceptional software solutions</p>
-            <div class="team-grid">
-                <div class="team-card scroll-reveal liquid-morph">
-                    <div class="team-image">
-                        <div class="placeholder-image">
-                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="120" height="120" rx="60" fill="var(--liquid-glass-bg)"/>
-                                <circle cx="60" cy="45" r="20" fill="rgba(59, 130, 246, 0.4)"/>
-                                <path d="M30 95 Q30 75 60 75 Q90 75 90 95" fill="rgba(59, 130, 246, 0.4)"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="team-info">
-                        <h3>Shubham Singh</h3>
-                        <p class="team-role">Founder & CEO</p>
-                        <p class="team-description">Strategic leader with 10+ years in software architecture and enterprise solutions. Drives innovation and client success at WorkStack.</p>
-                    </div>
-                </div>
-                <div class="team-card scroll-reveal liquid-morph">
-                    <div class="team-image">
-                        <div class="placeholder-image">
-                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="120" height="120" rx="60" fill="var(--liquid-glass-bg)"/>
-                                <circle cx="60" cy="45" r="20" fill="rgba(59, 130, 246, 0.4)"/>
-                                <path d="M30 95 Q30 75 60 75 Q90 75 90 95" fill="rgba(59, 130, 246, 0.4)"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="team-info">
-                        <h3>Aryan Singh</h3>
-                        <p class="team-role">Co-founder & CTO</p>
-                        <p class="team-description">Full-stack architect specializing in cloud-native applications and modern tech stacks. Ensures technical excellence across all projects.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="stats">
         <div class="container">
             <div class="stats-content">
@@ -1912,44 +1493,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <section class="testimonials">
-        <div class="container">
-            <h2 class="scroll-reveal">What Our Clients Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card scroll-reveal liquid-morph">
-                    <p class="testimonial-text">"WorkStack transformed our entire digital infrastructure. Their cloud migration strategy saved us 40% on infrastructure costs while improving performance."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar liquid-pulse">S</div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>CTO at TechCorp</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card scroll-reveal liquid-morph">
-                    <p class="testimonial-text">"The custom software solution delivered by WorkStack exceeded our expectations. Their team's expertise and attention to detail is unmatched."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar liquid-pulse">M</div>
-                        <div class="author-info">
-                            <h4>Mike Chen</h4>
-                            <p>Founder at StartupXYZ</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card scroll-reveal liquid-morph">
-                    <p class="testimonial-text">"Outstanding cybersecurity implementation. WorkStack helped us achieve compliance and significantly strengthened our security posture."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar liquid-pulse">A</div>
-                        <div class="author-info">
-                            <h4>Alex Rodriguez</h4>
-                            <p>IT Director at EnterpriseCo</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section id="contact" class="contact">
         <div class="container">
@@ -2032,7 +1575,6 @@
                     <h3>Company</h3>
                     <ul>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#team">Our Team</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
@@ -2184,16 +1726,6 @@
                 shape.style.transform = `translateY(${scrolled * speed}px) rotate(${rotation}deg)`;
             });
         });
-
-        // Simple shine effect for cards
-        document.querySelectorAll('.feature-card, .testimonial-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.position = 'relative';
-                card.style.overflow = 'hidden';
-            });
-        });
-
-
 
         // Add loading animation
         window.addEventListener('load', () => {
